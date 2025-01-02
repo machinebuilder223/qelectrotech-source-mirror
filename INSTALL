@@ -9,6 +9,13 @@ $ make
 # umask 0022
 # make install
 
+If you get this in QT Creator Debian 12:error: Project ERROR: Unknown module(s) in QT: KWidgetsAddons KCoreAddons
+Do this:
+rm -r build
+mkdir build/ && cd build
+qmake ../qelectrotech.pro
+make -j$(nproc)
+
 [fr]
 Pré-requis :
 libQt5 (paquets libqt5*)
